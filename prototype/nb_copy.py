@@ -153,7 +153,7 @@ def main():
                                                    step_size=3,
                                                    gamma=0.1)
 
-    num_epochs = 1
+    num_epochs = 32
     for epoch in range(num_epochs):
         # train for one epoch, printing every 10 iterations
         train_one_epoch(model, optimizer, data_loader, device, epoch, print_freq=20)
@@ -162,3 +162,8 @@ def main():
         # # evaluate on the test dataset
         #evaluate(model, data_loader_test, device=device)
     
+    torch.save(model.state_dict(), 'model.pth')
+    print("saved")
+
+if __name__ == "__main__":
+    main()
