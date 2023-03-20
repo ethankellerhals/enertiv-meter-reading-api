@@ -114,8 +114,8 @@ def load_model():
 
 def get_dataloader():
     # use our dataset and defined transformations
-    dataset = MeterReadingDataset('temp_dataset', get_transform(train=True))
-    dataset_test = MeterReadingDataset('temp_dataset', get_transform(train=False))
+    dataset = MeterReadingDataset('../data/temp_dataset', get_transform(train=True))
+    dataset_test = MeterReadingDataset('../data/temp_dataset', get_transform(train=False))
     # split the dataset in train and test set
     # indices = torch.randperm(len(dataset)).tolist()
     # dataset = torch.utils.data.Subset(dataset, indices[-50:])
@@ -153,7 +153,7 @@ def main():
                                                    step_size=3,
                                                    gamma=0.1)
 
-    num_epochs = 32
+    num_epochs = 15
     for epoch in range(num_epochs):
         # train for one epoch, printing every 10 iterations
         train_one_epoch(model, optimizer, data_loader, device, epoch, print_freq=20)
@@ -162,7 +162,7 @@ def main():
         # # evaluate on the test dataset
         #evaluate(model, data_loader_test, device=device)
     
-    torch.save(model.state_dict(), 'model.pth')
+    torch.save(model, "model.pt")
     print("saved")
 
 if __name__ == "__main__":
