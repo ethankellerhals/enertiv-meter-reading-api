@@ -22,11 +22,11 @@ def get_contour(image):
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
     # Define lower and upper bounds of red color in HSV color space
-    lower_red = np.array([0, 50, 50])
-    upper_red = np.array([10, 255, 255])
+    lower_red = np.array([0, 150, 150])
+    upper_red = np.array([15, 255, 255])
     mask1 = cv2.inRange(hsv, lower_red, upper_red)
 
-    lower_red = np.array([170, 50, 50])
+    lower_red = np.array([170, 150, 150])
     upper_red = np.array([180, 255, 255])
     mask2 = cv2.inRange(hsv, lower_red, upper_red)
 
