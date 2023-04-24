@@ -1,0 +1,7 @@
+# ignore all the model.pt
+
+final_version/cnn_model/*.pt
+
+final_version/*.pt
+
+*.pt
