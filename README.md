@@ -22,7 +22,7 @@ We explain in detail our working process
 ![](/screenshots/cmd.png)
 
 ## Datasets
-All the datasets are in the datasets folder and we had to annotate those images via drawing bounding box on the images in order to be used as training data. Here are the links of our datasets that we found. Some of our data came from our sponsor and images that our team took:
+All the datasets are in the datasets folder and we had to annotate those images via drawing bounding box on the images in order to be used as training data. Here are the links of our datasets that we found. Some of our data came from our sponsor and images that our team took, so there aren't links to those, but they can be found in our data folder:
 - http://artelab.dista.uninsubria.it/downloads/datasets/automatic_meter_reading/gas_meter_reading/gas_meter_reading.html
 - https://www.kaggle.com/datasets/tapakah68/yandextoloka-water-meters-dataset
 - https://github.com/SachaIZADI/Seven-Segment-OCR
